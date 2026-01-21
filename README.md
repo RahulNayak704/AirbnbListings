@@ -1,6 +1,6 @@
 # Airbnb Listings Demo (JS + DOM)
 
-This project loads and displays the **first 50 listings** from a local JSON file using **AJAX via `fetch()` + `async/await`**.
+This project loads and displays the **first 50 listings** from a local JSON file.
 
 ## Add your JSON file
 
@@ -43,8 +43,5 @@ Each listing card shows:
 1. Push this repo to GitHub.
 2. In GitHub: **Settings → Pages**
 3. Source: **Deploy from a branch**, select `main` and `/ (root)`.
-4. Wait for the build to finish.
-
-Deployment link (fill this in after publishing):
-- `https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/`
+4. Wait for the build to finish.`
 
