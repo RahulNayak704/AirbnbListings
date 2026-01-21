@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "name": "Cozy Studio Near Downtown",
+    "description": "A bright, quiet studio with fast Wi‑Fi and a comfy bed. Walkable to cafes and transit.",
+    "amenities": ["Wifi", "Kitchen", "Air conditioning", "Washer", "TV"],
+    "host_name": "Taylor",
+    "host_picture_url": "https://via.placeholder.com/128?text=Host",
+    "price": "$129 / night",
+    "thumbnail_url": "https://via.placeholder.com/640x400?text=Listing+Photo"
+  },
+  {
+    "id": 1002,
+    "name": "Modern Loft w/ City Views",
+    "description": "Spacious loft with a balcony, gym access, and panoramic views. Perfect for weekend trips.",
+    "amenities": "{Elevator,Gym,Wifi,Heating,Smoke alarm}",
+    "host_name": "Jordan",
+    "host_picture_url": "https://via.placeholder.com/128?text=Host",
+    "price": 210,
+    "picture_url": "https://via.placeholder.com/640x400?text=Listing+Photo"
+  }
+]
+

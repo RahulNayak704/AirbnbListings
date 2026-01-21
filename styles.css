@@ -1,0 +1,19 @@
+/* Very small, simple custom styles. Most of the look comes from Bootstrap. */
+
+body {
+  background-color: #f8f9fa;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+.listing-card-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.listing-amenities {
+  font-size: 0.8rem;
+}
+
