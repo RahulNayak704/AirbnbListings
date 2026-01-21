@@ -33,5 +33,5 @@ Each listing card shows:
 4. Wait for the build to finish.
 
 Deployment link:
-- [Live site](https://rahulnayak704.github.io/AirbnbListings/)
+- [Link to the site](https://rahulnayak704.github.io/AirbnbListings/)
 
