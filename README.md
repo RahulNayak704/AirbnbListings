@@ -1,6 +1,6 @@
-# Airbnb Listings Demo (JS + DOM)
+# Airbnb Listings Demo
 
-This project loads and displays the **first 50 listings** from a local JSON file.
+This project loads and displays the **first 50 listings** from a local JSON file using **AJAX via `fetch()` + `async/await`**.
 
 ## Add your JSON file
 
@@ -9,19 +9,6 @@ This project loads and displays the **first 50 listings** from a local JSON file
    - `data/listings.json`
 
 > If you don’t have it yet, there’s an example file at `data/listings.sample.json`.
-
-## Run locally (required for fetch)
-
-`fetch()` will not load JSON from a `file://` path. Use a local server.
-
-From this folder, run:
-
-```bash
-python3 -m http.server 5173
-```
-
-Then open:
-- `http://localhost:5173`
 
 ## Required fields displayed
 
@@ -43,5 +30,8 @@ Each listing card shows:
 1. Push this repo to GitHub.
 2. In GitHub: **Settings → Pages**
 3. Source: **Deploy from a branch**, select `main` and `/ (root)`.
-4. Wait for the build to finish.`
+4. Wait for the build to finish.
+
+Deployment link:
+- `(https://rahulnayak704.github.io/AirbnbListings/)`
 
