@@ -14,7 +14,7 @@ const els = {
   maxPriceInput: document.getElementById("maxPriceInput"),
 };
 
-let ALL = []; // normalized listings
+let ALL = [];
 
 init();
 
@@ -200,7 +200,6 @@ function setError(text) {
 }
 
 async function fetchJson(url, { forceReload } = {}) {
-  // cache-bust for reload button
   const finalUrl = forceReload ? `${url}?t=${Date.now()}` : url;
   const res = await fetch(finalUrl, { headers: { Accept: "application/json" } });
   if (!res.ok) {
@@ -213,12 +212,10 @@ function extractListingsArray(raw) {
   if (Array.isArray(raw)) return raw;
   if (!raw || typeof raw !== "object") return [];
 
-  // Common shapes
   if (Array.isArray(raw.listings)) return raw.listings;
   if (Array.isArray(raw.results)) return raw.results;
   if (Array.isArray(raw.data)) return raw.data;
 
-  // sometimes nested once more
   if (raw.payload && Array.isArray(raw.payload.listings)) return raw.payload.listings;
   if (raw.payload && Array.isArray(raw.payload.results)) return raw.payload.results;
 
@@ -232,7 +229,6 @@ function normalizeListing(x) {
     stringOrNull(x.id) ??
     stringOrNull(x.listing_id) ??
     stringOrNull(x._id) ??
-    // last resort: deterministic-ish id from name + host
     hashId(`${stringOrNull(x.name) ?? ""}|${stringOrNull(x.host_name) ?? ""}|${stringOrNull(x.price) ?? ""}`);
 
   const name = stringOrNull(x.name) ?? stringOrNull(x.listing_name) ?? stringOrNull(x.title);
@@ -277,7 +273,6 @@ function normalizeAmenities(v) {
   if (Array.isArray(v)) return v.map((x) => String(x).trim()).filter(Boolean);
 
   if (typeof v === "string") {
-    // try to parse formats like: "{TV,Wifi,Kitchen}" or '["TV","Wifi"]'
     const trimmed = v.trim();
     if (!trimmed) return [];
 
@@ -321,7 +316,6 @@ function formatPrice(raw, numeric) {
 }
 
 function sortListings(items, sort, query) {
-  // Simple: keep original order, unless there is a search term.
   if (!query) return items;
 
   return items
@@ -368,7 +362,6 @@ function debounce(fn, delayMs) {
 }
 
 function hashId(s) {
-  // tiny stable hash to avoid null ids; not crypto
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) {
     h ^= s.charCodeAt(i);
@@ -378,7 +371,6 @@ function hashId(s) {
 }
 
 function placeholderImageDataUrl() {
-  // Small SVG placeholder (no external assets needed)
   const svg = encodeURIComponent(
     `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400">
       <defs>
